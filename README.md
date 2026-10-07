@@ -237,24 +237,6 @@ For only the API client, run `-m unittest -v test_sre_chat_api` with its
 dependencies installed. For only MCP, run `-m unittest -v test_sre_chat`.
 Fixtures use synthetic targets, tokens, and thread UUIDs.
 
-## Before publishing your own copy
-
-- Keep real subscription/tenant IDs, resource names, personal paths, credentials,
-  and conversation output out of examples and commits.
-- [.gitignore](.gitignore) excludes `.venv`, Python caches, local VS Code settings,
-  `.env` files (except `.env.example`), `.azure`, and `*.log`. These rules do
-  **not** remove files already tracked by Git or clean earlier commits.
-- Do not upload the whole working folder or a ZIP containing local artifacts:
-  virtual environments and bytecode can embed usernames, absolute paths, and
-  older source values. Git ignore rules do not sanitize ZIPs/manual uploads.
-- Before committing, inspect `git status --short`, `git diff --cached`, and
-  `git ls-files`. Review any Git history you intend to push, not just current files.
-- If an actual credential was ever committed/shared, revoke or rotate it and
-  remove it from history. Subscription IDs are identifiers, not credentials,
-  but may still reveal environment ownership.
-- Choose an appropriate license before publishing if you want to grant others
-  permission to reuse the code.
-
 ## References
 
 - [SRE Agent MCP setup](https://learn.microsoft.com/en-us/azure/sre-agent/setup-mcp-server?tabs=vscode)
